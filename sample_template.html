@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap Platform - Sample Template</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <i class="fas fa-exchange-alt"></i> SkillSwap
+            </a>
+            <ul class="navbar-nav">
+                <li><a href="#" class="nav-link active">Dashboard</a></li>
+                <li><a href="#" class="nav-link">Search</a></li>
+                <li><a href="#" class="nav-link">My Requests</a></li>
+                <li><a href="#" class="nav-link">Profile</a></li>
+                <li><a href="#" class="nav-link">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Welcome Section -->
+        <div class="card fade-in">
+            <div class="card-header">
+                <h1 class="card-title">Welcome to SkillSwap!</h1>
+            </div>
+            <div class="card-body">
+                <p>Connect with people who have the skills you need and share your expertise in return.</p>
+                <div class="d-flex gap-2 mt-3">
+                    <button class="btn btn-primary">Start Swapping</button>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistics Dashboard -->
+        <div class="dashboard-stats">
+            <div class="stat-card fade-in">
+                <div class="stat-number">12</div>
+                <div class="stat-label">Completed Swaps</div>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-number">8</div>
+                <div class="stat-label">Pending Requests</div>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-number">4.8</div>
+                <div class="stat-label">Average Rating</div>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-number">25</div>
+                <div class="stat-label">Skills Offered</div>
+            </div>
+        </div>
+
+        <!-- Search Section -->
+        <div class="search-container fade-in">
+            <h3>Find People to Swap With</h3>
+            <form class="search-form">
+                <div class="form-group">
+                    <label class="form-label">Search</label>
+                    <input type="text" class="form-control search-input" placeholder="Search by name, skills, or location...">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Location</label>
+                    <input type="text" class="form-control" placeholder="City, State">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Skill</label>
+                    <select class="form-control">
+                        <option value="">Any Skill</option>
+                        <option value="programming">Programming</option>
+                        <option value="design">Graphic Design</option>
+                        <option value="cooking">Cooking</option>
+                        <option value="language">Language Learning</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">Search</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- User Grid -->
+        <div class="user-grid">
+            <!-- User Card 1 -->
+            <div class="user-card fade-in">
+                <div class="user-card-header">
+                    <img src="https://via.placeholder.com/80x80/667eea/ffffff?text=JD" alt="John Doe" class="user-avatar">
+                    <div class="user-name">John Doe</div>
+                    <div class="user-location">New York, NY</div>
+                </div>
+                <div class="user-card-body">
+                    <div class="skills-section">
+                        <div class="skills-title">Skills Offered:</div>
+                        <div class="skills-list">
+                            <span class="skill-tag">Web Development</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React</span>
+                        </div>
+                    </div>
+                    <div class="skills-section">
+                        <div class="skills-title">Skills Wanted:</div>
+                        <div class="skills-list">
+                            <span class="skill-tag">Graphic Design</span>
+                            <span class="skill-tag">UI/UX</span>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-primary btn-sm" data-tooltip="View full profile">View Profile</button>
+                        <button class="btn btn-outline btn-sm" data-tooltip="Send swap request">Send Request</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Card 2 -->
+            <div class="user-card fade-in">
+                <div class="user-card-header">
+                    <img src="https://via.placeholder.com/80x80/f093fb/ffffff?text=JS" alt="Jane Smith" class="user-avatar">
+                    <div class="user-name">Jane Smith</div>
+                    <div class="user-location">Los Angeles, CA</div>
+                </div>
+                <div class="user-card-body">
+                    <div class="skills-section">
+                        <div class="skills-title">Skills Offered:</div>
+                        <div class="skills-list">
+                            <span class="skill-tag">Graphic Design</span>
+                            <span class="skill-tag">Illustration</span>
+                            <span class="skill-tag">Branding</span>
+                        </div>
+                    </div>
+                    <div class="skills-section">
+                        <div class="skills-title">Skills Wanted:</div>
+                        <div class="skills-list">
+                            <span class="skill-tag">Web Development</span>
+                            <span class="skill-tag">Digital Marketing</span>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-primary btn-sm">View Profile</button>
+                        <button class="btn btn-outline btn-sm">Send Request</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Card 3 -->
+            <div class="user-card fade-in">
+                <div class="user-card-header">
+                    <img src="https://via.placeholder.com/80x80/4facfe/ffffff?text=MB" alt="Mike Brown" class="user-avatar">
+                    <div class="user-name">Mike Brown</div>
+                    <div class="user-location">Chicago, IL</div>
+                </div>
+                <div class="user-card-body">
+                    <div class="skills-section">
+                        <div class="skills-title">Skills Offered:</div>
+                        <div class="skills-list">
+                            <span class="skill-tag">Cooking</span>
+                            <span class="skill-tag">Baking</span>
+                            <span class="skill-tag">Recipe Development</span>
+                        </div>
+                    </div>
+                    <div class="skills-section">
+                        <div class="skills-title">Skills Wanted:</div>
+                        <div class="skills-list">
+                            <span class="skill-tag">Photography</span>
+                            <span class="skill-tag">Video Editing</span>
+                        </div>
+                    </div>
+                    <div class="text-center mt-3">
+                        <button class="btn btn-primary btn-sm">View Profile</button>
+                        <button class="btn btn-outline btn-sm">Send Request</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Swap Requests Section -->
+        <div class="card fade-in">
+            <div class="card-header">
+                <h3>Recent Swap Requests</h3>
+            </div>
+            <div class="card-body">
+                <!-- Swap Request 1 -->
+                <div class="swap-request" data-swap-id="1">
+                    <div class="swap-header">
+                        <div>
+                            <strong>From: Sarah Wilson</strong>
+                            <div class="text-muted">2 hours ago</div>
+                        </div>
+                        <span class="swap-status pending">Pending</span>
+                    </div>
+                    <div class="swap-details">
+                        <div class="swap-skill">
+                            <div class="swap-skill-label">You'll Receive:</div>
+                            <div class="swap-skill-value">Spanish Lessons</div>
+                        </div>
+                        <div class="swap-skill">
+                            <div class="swap-skill-label">You'll Provide:</div>
+                            <div class="swap-skill-value">Web Development</div>
+                        </div>
+                    </div>
+                    <div class="swap-actions">
+                        <button class="btn btn-success btn-sm btn-accept" data-swap-id="1">Accept</button>
+                        <button class="btn btn-danger btn-sm btn-reject" data-swap-id="1">Reject</button>
+                    </div>
+                </div>
+
+                <!-- Swap Request 2 -->
+                <div class="swap-request" data-swap-id="2">
+                    <div class="swap-header">
+                        <div>
+                            <strong>To: Alex Johnson</strong>
+                            <div class="text-muted">1 day ago</div>
+                        </div>
+                        <span class="swap-status accepted">Accepted</span>
+                    </div>
+                    <div class="swap-details">
+                        <div class="swap-skill">
+                            <div class="swap-skill-label">You'll Receive:</div>
+                            <div class="swap-skill-value">Guitar Lessons</div>
+                        </div>
+                        <div class="swap-skill">
+                            <div class="swap-skill-label">You'll Provide:</div>
+                            <div class="swap-skill-value">Data Analysis</div>
+                        </div>
+                    </div>
+                    <div class="swap-actions">
+                        <button class="btn btn-primary btn-sm">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Section -->
+        <div class="card fade-in">
+            <div class="card-header">
+                <h3>Recent Feedback</h3>
+            </div>
+            <div class="card-body">
+                <!-- Feedback Item 1 -->
+                <div class="feedback-item">
+                    <div class="feedback-header">
+                        <div>
+                            <strong>From: David Chen</strong>
+                            <div class="feedback-rating">
+                                <span class="star active">★</span>
+                                <span class="star active">★</span>
+                                <span class="star active">★</span>
+                                <span class="star active">★</span>
+                                <span class="star active">★</span>
+                            </div>
+                        </div>
+                        <div class="feedback-date">3 days ago</div>
+                    </div>
+                    <div class="feedback-comment">
+                        "Excellent web development skills! John helped me build a beautiful portfolio website. Highly recommended!"
+                    </div>
+                </div>
+
+                <!-- Feedback Item 2 -->
+                <div class="feedback-item">
+                    <div class="feedback-header">
+                        <div>
+                            <strong>From: Lisa Park</strong>
+                            <div class="feedback-rating">
+                                <span class="star active">★</span>
+                                <span class="star active">★</span>
+                                <span class="star active">★</span>
+                                <span class="star active">★</span>
+                                <span class="star">☆</span>
+                            </div>
+                        </div>
+                        <div class="feedback-date">1 week ago</div>
+                    </div>
+                    <div class="feedback-comment">
+                        "Great communication and delivered exactly what I needed. Would definitely work with again!"
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Form Example -->
+        <div class="form-container slide-in">
+            <h2 class="text-center mb-4">Login to SkillSwap</h2>
+            <form>
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" placeholder="Enter your password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                </div>
+                <div class="text-center mt-3">
+                    <a href="#" class="text-muted">Forgot password?</a>
+                    <span class="mx-2">|</span>
+                    <a href="#" class="text-muted">Create account</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- Rating System Example -->
+        <div class="card fade-in">
+            <div class="card-header">
+                <h3>Rate Your Experience</h3>
+            </div>
+            <div class="card-body">
+                <div class="rating-input">
+                    <input type="hidden" name="rating" value="0">
+                    <div class="feedback-rating">
+                        <span class="star" data-rating="1">☆</span>
+                        <span class="star" data-rating="2">☆</span>
+                        <span class="star" data-rating="3">☆</span>
+                        <span class="star" data-rating="4">☆</span>
+                        <span class="star" data-rating="5">☆</span>
+                    </div>
+                    <div class="mt-2">
+                        <textarea class="form-control" placeholder="Share your experience (optional)"></textarea>
+                    </div>
+                    <div class="mt-3">
+                        <button class="btn btn-primary">Submit Feedback</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alert Examples -->
+        <div class="alert alert-success">
+            <strong>Success!</strong> Your swap request has been sent successfully.
+        </div>
+
+        <div class="alert alert-danger">
+            <strong>Error!</strong> Please check your input and try again.
+        </div>
+
+        <div class="alert alert-warning">
+            <strong>Warning!</strong> You have 3 pending swap requests.
+        </div>
+
+        <div class="alert alert-info">
+            <strong>Info!</strong> New features are available. Check them out!
+        </div>
+
+        <!-- Pagination Example -->
+        <div class="pagination">
+            <a href="#" class="page-link">Previous</a>
+            <a href="#" class="page-link">1</a>
+            <a href="#" class="page-link active">2</a>
+            <a href="#" class="page-link">3</a>
+            <a href="#" class="page-link">Next</a>
+        </div>
+    </div>
+
+    <!-- Modal Example -->
+    <div id="swapModal" class="modal">
+        <div class="modal-content">
+            <h3>Send Swap Request</h3>
+            <form>
+                <div class="form-group">
+                    <label class="form-label">Skill You Want</label>
+                    <input type="text" class="form-control" placeholder="e.g., Graphic Design" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Skill You'll Provide</label>
+                    <input type="text" class="form-control" placeholder="e.g., Web Development" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Message (Optional)</label>
+                    <textarea class="form-control" placeholder="Tell them about your request..."></textarea>
+                </div>
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-primary">Send Request</button>
+                    <button type="button" class="btn btn-outline" onclick="app.closeModal(document.getElementById('swapModal'))">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="btn btn-primary" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; border-radius: 50%; width: 50px; height: 50px; display: none;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="assets/js/app.js"></script>
+    <script>
+        // Show scroll to top button when scrolling
+        window.addEventListener('scroll', () => {
+            const scrollBtn = document.getElementById('scrollToTop');
+            if (window.scrollY > 300) {
+                scrollBtn.style.display = 'block';
+            } else {
+                scrollBtn.style.display = 'none';
+            }
+        });
+
+        // Scroll to top functionality
+        document.getElementById('scrollToTop').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html> 
