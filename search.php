@@ -13,7 +13,7 @@ require_once 'includes/auth.php';
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background: linear-gradient(135deg, #4f8cff 0%, #1e3c72 100%);
+            background: linear-gradient(135deg, #eaf6ff 0%, #b3e5fc 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -21,14 +21,14 @@ require_once 'includes/auth.php';
             font-family: 'Inter', sans-serif;
         }
         .floating-search {
-            background: rgba(30, 40, 80, 0.92);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25), 0 2px 8px 0 #4f8cff44;
+            background: #fff;
+            box-shadow: 0 8px 32px 0 #b3e5fc55;
             border-radius: 24px;
             padding: 2.5rem 2rem 2rem 2rem;
             max-width: 420px;
             width: 100%;
             margin: 2rem auto;
-            color: #fff;
+            color: #1976d2;
             position: relative;
             animation: floatIn 0.8s cubic-bezier(.39,.575,.56,1.000);
         }
@@ -36,60 +36,62 @@ require_once 'includes/auth.php';
             text-align: center;
             margin-bottom: 1.5rem;
             font-size: 2rem;
-            color: #e3f0ff;
+            color: #1976d2;
         }
         .floating-search input[type="text"] {
             width: 100%;
             padding: 0.75rem 1rem;
             border-radius: 8px;
-            border: none;
-            background: rgba(255,255,255,0.10);
-            color: #e3f0ff;
+            border: 1.5px solid #b3e5fc;
+            background: #f8faff;
+            color: #1976d2;
             font-size: 1rem;
             margin-bottom: 1.2rem;
             outline: none;
-            transition: box-shadow 0.2s;
+            transition: box-shadow 0.2s, border 0.2s;
         }
         .floating-search input:focus {
-            box-shadow: 0 0 0 2px #4f8cff;
-            background: rgba(255,255,255,0.18);
+            box-shadow: 0 0 0 2px #b3e5fc;
+            border: 1.5px solid #2196f3;
+            background: #eaf6ff;
         }
         .floating-search button {
             width: 100%;
             padding: 0.75rem;
             border-radius: 8px;
             border: none;
-            background: linear-gradient(90deg, #4f8cff 0%, #1e3c72 100%);
+            background: linear-gradient(90deg, #2196f3 0%, #4fc3f7 100%);
             color: #fff;
             font-weight: 700;
             font-size: 1.1rem;
             margin-top: 0.5rem;
             cursor: pointer;
             transition: background 0.2s, transform 0.2s;
+            box-shadow: 0 2px 8px #2196f322;
         }
         .floating-search button:hover {
-            background: linear-gradient(90deg, #1e3c72 0%, #4f8cff 100%);
+            background: linear-gradient(90deg, #1565c0 0%, #2196f3 100%);
             transform: translateY(-2px) scale(1.03);
         }
         .results {
             margin-top: 2rem;
         }
         .result-item {
-            background: rgba(44, 62, 80, 0.95);
+            background: #f8faff;
             border-radius: 16px;
-            box-shadow: 0 4px 16px 0 #4f8cff22;
+            box-shadow: 0 4px 16px 0 #b3e5fc33;
             padding: 1.5rem;
             margin-bottom: 1.2rem;
-            color: #e3f0ff;
+            color: #1976d2;
             animation: floatIn 0.7s cubic-bezier(.39,.575,.56,1.000);
         }
         .result-item h3 {
             margin: 0 0 0.5rem 0;
-            color: #4f8cff;
+            color: #2196f3;
         }
         .result-item a {
             color: #fff;
-            background: #4f8cff;
+            background: #2196f3;
             padding: 0.4rem 1rem;
             border-radius: 6px;
             text-decoration: none;
@@ -97,7 +99,7 @@ require_once 'includes/auth.php';
             transition: background 0.2s;
         }
         .result-item a:hover {
-            background: #1e3c72;
+            background: #1565c0;
         }
         @keyframes floatIn {
             from { opacity: 0; transform: translateY(30px) scale(0.98); }
@@ -158,6 +160,26 @@ require_once 'includes/auth.php';
             echo "</div>";
         }
         ?>
+    </div>
+    <div style="max-width: 700px; margin: 2.5rem auto 0 auto;">
+        <div style="background:rgba(255,255,255,0.85);box-shadow:0 4px 24px #b3e5fc55;border-radius:20px;padding:2rem 2.5rem 1.5rem 2.5rem;margin-bottom:2rem;">
+            <h3 style="color:#1976d2;text-align:center;margin-bottom:1.2rem;font-size:1.3rem;">Trending Skills</h3>
+            <div style="display:flex;flex-wrap:wrap;gap:0.7em;justify-content:center;">
+                <span class="skill-tag">Web Development</span>
+                <span class="skill-tag">Graphic Design</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Cooking</span>
+                <span class="skill-tag">Photography</span>
+                <span class="skill-tag">Music</span>
+                <span class="skill-tag">Marketing</span>
+                <span class="skill-tag">Fitness Training</span>
+                <span class="skill-tag">Language Exchange</span>
+            </div>
+        </div>
+        <div style="background:rgba(255,255,255,0.7);box-shadow:0 2px 12px #b3e5fc33;border-radius:16px;padding:1.5rem 2rem;text-align:center;">
+            <h4 style="color:#2196f3;margin-bottom:0.7rem;">Not sure what to search?</h4>
+            <p style="color:#1976d2;font-size:1.05rem;">Try searching for a skill you want to learn or offer, like <b>"Python"</b>, <b>"Cooking"</b>, or <b>"Design"</b>. You can also browse trending skills above for inspiration!</p>
+        </div>
     </div>
 </body>
 </html>

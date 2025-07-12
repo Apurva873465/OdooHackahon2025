@@ -27,10 +27,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 <link rel="stylesheet" href="assets/css/style.css">
-<!-- Simple Registration Form -->
-<form method="POST">
-    <input type="text" name="name" placeholder="Your Name" required><br><br>
-    <input type="email" name="email" placeholder="Email Address" required><br><br>
-    <input type="password" name="password" placeholder="Password" required><br><br>
-    <button type="submit">Register</button>
-</form>
+<div class="form-container">
+    <form method="POST">
+        <h2 class="mb-3" style="text-align:center;">Register</h2>
+        <div class="form-group">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+        </div>
+        <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" placeholder="Password" required>
+        </div>
+        <div class="form-group" style="text-align:center;">
+            <button type="submit" class="btn btn-primary">Register</button>
+        </div>
+    </form>
+</div>

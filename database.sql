@@ -72,6 +72,17 @@ CREATE TABLE notifications (
     INDEX idx_created (created_at)
 );
 
+CREATE TABLE swap_messages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    swap_id INT NOT NULL,
+    sender_id INT NOT NULL,
+    message TEXT NOT NULL,
+    sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    seen TINYINT(1) DEFAULT 0,
+    FOREIGN KEY (swap_id) REFERENCES swaps(id) ON DELETE CASCADE,
+    FOREIGN KEY (sender_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
 -- Insert default admin user (password: admin123)
 INSERT INTO users (name, email, password, role, created_at) VALUES 
 ('Admin User', 'admin@skillswap.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin', NOW());
